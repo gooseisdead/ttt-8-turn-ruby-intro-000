@@ -8,7 +8,6 @@ def display_board(board)
 end
 
 def move(board, index, char = "X")
-  binding.pry
   board[index] = char
 end
 
