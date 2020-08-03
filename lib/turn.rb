@@ -1,3 +1,4 @@
+require "pry"
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,6 +8,7 @@ def display_board(board)
 end
 
 def move(board, index, char = "X")
+  binding.pry
   board[index] = char
 end
 
@@ -14,7 +16,7 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-def turn(board)
+def turn(board) # until loop version
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
